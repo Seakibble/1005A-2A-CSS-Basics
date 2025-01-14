@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- We can inlcude font families by link -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
+    
+
+    <!-- Reset the styles across browsers. -->
+     <!-- https://www.joshwcomeau.com/css/custom-css-reset/ -->
+    <link rel="stylesheet" href="css/reset.css">
+
+    <!-- inlcude our own styles (preferred way of including css) -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Internal styling. Also not preferred. -->
+    <style>
+        body {
+            background-color: #ddf;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Inline styles. Not preferred, gets messy -->
+        <h1 style="color:green">Hello</h1>
+    </header>
+    <main>
+        <section>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
+            <p class="highlighted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
+            
+            <p class="highlighted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
+
+            <div class="box"></div>
+        </section>
+        <section>
+            <h2 class="highlighted">Hello</h2>
+
+            <p id="fourthParagraph" class="highlighted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur odio animi nobis, nesciunt dolorum culpa facilis dolores saepe adipisci est repellendus distinctio molestiae reprehenderit quis natus laboriosam asperiores, eius quasi!</p>
+        </section>
+    </main>
+    <footer></footer>
+</body>
+</html>
