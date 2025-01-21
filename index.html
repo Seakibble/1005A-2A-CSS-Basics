@@ -10,15 +10,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> -->
     
-
+    <!-- External styles, best way to include styles -->
     <!-- Reset the styles across browsers. -->
-     <!-- https://www.joshwcomeau.com/css/custom-css-reset/ -->
+    <!-- https://www.joshwcomeau.com/css/custom-css-reset/ -->
     <link rel="stylesheet" href="css/reset.css">
-
     <!-- inlcude our own styles (preferred way of including css) -->
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Internal styling. Also not preferred. -->
+    <!-- Internal styling. Not preferred. -->
     <style>
         body {
             background-color: #ddf;
@@ -27,14 +26,14 @@
 </head>
 <body>
     <header>
-        <!-- Inline styles. Not preferred, gets messy -->
+        <!-- Inline styles, not preferred. Easy way to directly apply CSS, but it can get messy if we rely on it. It will also override any styles we link from elsewhere. -->
         <h1 style="color:green">Hello</h1>
     </header>
     <main>
         <section>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
+            <!-- CSS is most commonly applied to a 'class' which in turn is placed on HTML elements you want to style. -->
             <p class="highlighted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
-            
             <p class="highlighted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, molestias! Ullam, hic at doloremque ex rerum quibusdam vitae, totam, adipisci modi porro nesciunt perspiciatis reiciendis vero officiis ipsum neque tenetur.</p>
 
             <div class="box"></div>
@@ -42,6 +41,7 @@
         <section>
             <h2 class="highlighted">Hello</h2>
 
+            <!-- CSS can also be applied to elements by targetting their id, but as ids are unique, this is not prefered. -->
             <p id="fourthParagraph" class="highlighted">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur odio animi nobis, nesciunt dolorum culpa facilis dolores saepe adipisci est repellendus distinctio molestiae reprehenderit quis natus laboriosam asperiores, eius quasi!</p>
         </section>
     </main>
