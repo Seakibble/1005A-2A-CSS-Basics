@@ -1,26 +1,43 @@
-/* We can also link font susing an @import command */
+/* We can also link fonts using an @import command */
+/* There's not much difference between linking fonts here or in the HTML. It's mostly a matter of preference. */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
+/* Styles are applied to 'selectors' which are the HTML elements we want to target. selectors can be tags, classes, ids, or combinations of them. */
 body {
     color: purple;
+    /* We can set the size of text on the page. This value is referenced by other elements like <p> and <h1> tags, so it will scale all the text. */
     font-size: 18px;
+    
+    /* We can change the font family to use a custom font. */
     /* font-family: Arial, Helvetica, sans-serif; */
+    /* We usually provide at least one fallback font in case it fails to load. This very rare, but still it's a good idea to include a fallback. We can just put serif as any serif font will be close enough to the one we chose here. */
     font-family: Rubik, sans-serif;
     /* font-family: "Playfair Display", serif; */
 }
 
 main {
+    /* We can set margins on block elements, which push them away from other elements.  */
+    /* If we provide one number, it applies to all sides. For two, it applies to top/bottom and sides. Three is top, sides, and bottom. Four is all sides, in clockwise order, starting with the top. */
     /* margin: 40px; */
     /* margin: 40px 400px; */
     /* margin: 40px 400px 0; */
     /* margin: 40px 400px 30px 10px; */
 
+
+    /* We can set the width of block type elements if we want to constrain them. However, on smaller screens, this can overflow off the right hand side of the page. */
+    /* width: 750px; */
+    /* If we instead set a max-width, then the element will shrink if the container is too small. This is generally preferred. */
     max-width: 750px;
+
+    /* If we've set the width or max-width on an element, then we can give it automatic margins to center it (horizontally) in the middle of the page. This only works on block elements. */
     margin: 0 auto;
 }
 
 h1 {
+    /* we can set the font size of headings using px, but that isn't ideal as it won't scale with the base font size of the page. */
     /* font-size: 60px; */
+
+    /* em units are multiples of the default font size of the element. So if the base font size is 20px, then 3em is 60px. If the base font size would change and we're using ems, then the font size will automatically resize. */
     font-size: 3em;
 }
 h2 {
@@ -31,7 +48,8 @@ h2 {
 h1, h2 {
     font-family: "Playfair Display", serif;
 
-    /* We can set the background to an image. If you do, be aware that the filepath starts in the css folder. Use ../ to go up a level. */
+    /* We can set the background to a solid colour, a gradient, or even images. */
+    /* If setting to an image, be aware that the filepath starts in the css folder. Use ../ to go up a level. */
     background-image: url('../images/frog.jpg');
 
     /* lets us position the image if we're using one */
@@ -43,7 +61,10 @@ h1, h2 {
     /* adjust sizing of background image */
     background-size: 100%;
 
+    /* Setting the font-weight makes the font lighter or heavier.  Options are determined by the font you choose but range from 100-900. 400 is normal, 700 is bold. */
     font-weight: 900;
+
+    /* We can align text (and other inline elements) to the left, center or right. */
     text-align: center;
 }
 
@@ -60,11 +81,17 @@ p {
 
 
 
-/* Style by class */
+/* Targetting by class - more specific than tags and override them if there's a conflict. */
+/* Classes are prefixed with . */
 .highlighted {
     background-color: yellow;
+
+    /* For borders, we can specify the border on all sides with the shorthand - thickness, style, colour */
     border: 5px solid red;
+
+    /* We can override specific sides, or specific properties for the whole */
     border-color: grey;
+    /* We can specify a border radius to add a curve to the corners of an element. */
     border-radius: 20px;
     border-bottom: 8px dotted green;
 
@@ -77,12 +104,14 @@ p.highlighted {
     /* background-color: yellow; */
 }
 
-/* styled by id */
+
+/* Targetting by id - more specific than classes and tags */
+/* Classes are prefixed with # */
 #fourthParagraph {
     /* background-color: red; */
     color: black;
 
-    /* Setting height can cause overflow */
+    /* Setting height can cause overflow of the content inside. It's almost always preferred to let the content determine the height automatically. */
     /* height: 40px; */
 }
 
@@ -103,7 +132,7 @@ p.highlighted {
 section {
     /* vh is viewport-height. Units are percent of the size of the viewport*/
     min-height: 50vh;
-    padding-bottom: 40px ;
+    padding-bottom: 40px;
     margin-bottom: 60px;
     /* background: #faa; */
 }
